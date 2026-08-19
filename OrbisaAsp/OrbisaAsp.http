@@ -1,0 +1,6 @@
+@OrbisaAsp_HostAddress = http://localhost:5298
+
+GET {{OrbisaAsp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
