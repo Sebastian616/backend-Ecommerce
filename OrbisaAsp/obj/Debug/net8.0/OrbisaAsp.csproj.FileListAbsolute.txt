@@ -47,3 +47,4 @@ D:\Visual proyects\Orbisa\OrbisaAsp\OrbisaAsp\obj\Debug\net8.0\OrbisaAsp.genrunt
 D:\Visual proyects\Orbisa\OrbisaAsp\OrbisaAsp\obj\Debug\net8.0\ref\OrbisaAsp.dll
 D:\Visual proyects\Orbisa\OrbisaAsp\OrbisaAsp\bin\Debug\net8.0\AWSSDK.Core.dll
 D:\Visual proyects\Orbisa\OrbisaAsp\OrbisaAsp\bin\Debug\net8.0\AWSSDK.DynamoDBv2.dll
+D:\Visual proyects\Orbisa\OrbisaAsp\OrbisaAsp\obj\Debug\net8.0\OrbisaAsp.sourcelink.json

@@ -33,8 +33,10 @@ namespace OrbisaApi.Controllers
 
         // POST api/<UserController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<ActionResult> Post([FromBody] User user)
         {
+            var response = await _userService.CreateUser(user);
+            return Ok(response);
         }
 
         // PUT api/<UserController>/5
