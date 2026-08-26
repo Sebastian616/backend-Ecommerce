@@ -2,12 +2,12 @@
 {
     public class Product
     {
-        private int Id {  get; set; }
-        private string Name { get; set; }
-        private string Size { get; set; }
-        private string Color { get; set; }
-        private string Gender { get; set; }
-        private string Description { get; set; }
+        private int id {  get; set; }
+        private string name { get; set; }
+        private string size { get; set; }
+        private string color { get; set; }
+        private string gender { get; set; }
+        private string description { get; set; }
         private bool isAbled { get; set; }
     }
 }

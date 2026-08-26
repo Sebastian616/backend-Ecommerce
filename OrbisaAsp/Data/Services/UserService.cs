@@ -1,12 +1,14 @@
 ﻿using Amazon.DynamoDBv2;
+using Amazon.DynamoDBv2.DataModel;
 using Amazon.DynamoDBv2.Model;
-using Microsoft.AspNetCore.Mvc;
 using OrbisaApi.Data.Models;
 
 namespace OrbisaApi.Data.Services
 {
     public class UserService
     {
+        private const string TABLE_NAME = "User";
+
         private readonly IAmazonDynamoDB _dynamoDb;
 
         public UserService(IAmazonDynamoDB dynamoDb)
@@ -18,38 +20,65 @@ namespace OrbisaApi.Data.Services
         {
             var request = new PutItemRequest
             {
-                TableName = "Prueba",
+                TableName = TABLE_NAME,
                 Item = new Dictionary<string, AttributeValue>
                 {
-                    ["mondongo"] =  new AttributeValue { S = "1" },
-                    ["uuid"] = new AttributeValue { S = user.uuid },
+                    ["uuid"] =  new AttributeValue { S = Guid.NewGuid().ToString() },
                     ["name"] = new AttributeValue { S = user.name },
-                    ["whatsapp"] = new AttributeValue { S = user.whatsapp }
-                    //["cart"] = new AttributeValue { S = user.GetCart() },
+                    ["whatsapp"] = new AttributeValue { S = user.whatsapp },
                 }
             };
             await _dynamoDb.PutItemAsync(request);
             return user;
         }
-        /*
-        public async Task<IActionResult> Index()
+
+        public async Task<List<User>> GetUsers()
         {
             var request = new ScanRequest
             {
-                TableName = "Prueba"
+                TableName = TABLE_NAME
             };
 
             var response = await _dynamoDb.ScanAsync(request);
 
-            var videos = response.Items.Select(item => new User
-            {
-                uuid = item["video_id"].N,
-                name = item["titulo"].S,
-                whatsapp = item["url"].S,
-                cart = null
-            }).ToList();
+            var users = new List<User>();
 
-            return View(videos);
-        }*/
+            foreach (var item in response.Items)
+            {
+                users.Add(new User(
+                    item["uuid"].S,
+                    item["name"].S,
+                    item["whatsapp"].S
+                ));
+            }
+
+            return users;
+        }
+
+        public async Task<User?> GetById(string uuid)
+        {
+            var request = new GetItemRequest
+            {
+                TableName = "User",
+
+                Key = new Dictionary<string, AttributeValue>
+                {
+                    ["uuid"] = new AttributeValue
+                    {
+                        S = uuid
+                    }
+                }
+            };
+
+            var response = await _dynamoDb.GetItemAsync(request);
+            if (response.Item == null || response.Item.Count == 0)
+                return null;
+
+            return new User(
+                response.Item["uuid"].S,
+                response.Item["name"].S,
+                response.Item["whatsapp"].S
+            );
+        }
     }
 }

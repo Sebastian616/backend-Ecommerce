@@ -1,19 +1,23 @@
-﻿namespace OrbisaApi.Data.Models
+﻿using Amazon.DynamoDBv2.DataModel;
+namespace OrbisaApi.Data.Models
 {
+
+    [DynamoDBTable("User")]
     public class User
     {
+        [DynamoDBHashKey]
         public string uuid { get; set; }
         public string name { get; set; }
         public string whatsapp { get; set; }
-        public List<OrderDetail> cart { get; set; }
 
-        public User(string uuid, string name, string whatsapp, List<OrderDetail> cart = null)
+        public User(string uuid, string name, string whatsapp)
         {
             this.uuid = uuid;
             this.name = name;
             this.whatsapp = whatsapp;
-            this.cart = new List<OrderDetail>();
         }
+
+        public User() { }
         //Getters
         //Setters
     }

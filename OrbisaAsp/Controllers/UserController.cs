@@ -19,16 +19,22 @@ namespace OrbisaApi.Controllers
 
         // GET: api/<UserController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<ActionResult> Get()
         {
-            return new string[] { "value1", "value2" };
+            var response = await _userService.GetUsers();
+            return Ok(response);
         }
 
         // GET api/<UserController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{uuid}")]
+        public async Task<IActionResult> GetById(string uuid)
         {
-            return "value";
+            var user = await _userService.GetById(uuid);
+
+            if (user == null)
+                return NotFound();
+
+            return Ok(user);
         }
 
         // POST api/<UserController>
@@ -49,13 +55,6 @@ namespace OrbisaApi.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-        }
-
-        [HttpPost("Prueba")]
-        public async Task<IActionResult> Prueba (User user)
-        {
-            await _userService.CreateUser(user);
-            return Ok();
         }
     }
 }

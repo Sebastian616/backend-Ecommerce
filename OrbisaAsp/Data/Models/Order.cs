@@ -2,9 +2,11 @@
 {
     public class Order
     {
-        private List<OrderDetail> OrderDetail { get; set; }
-        private User user {  get; set; }
-        private int Stare { get; set; }
-        private DateTime Date { get; set; }
+
+        public string id { get; set; }
+        public int state { get; set; }
+        public DateTime date { get; set; }
+        public User? user { get; set; }
+        public List<Product>? products { get; set; }
     }
 }
