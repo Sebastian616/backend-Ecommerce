@@ -38,7 +38,6 @@ D:\Visual proyects\Orbisa\OrbisaAsp\OrbisaAsp\obj\Debug\net8.0\staticwebassets.b
 D:\Visual proyects\Orbisa\OrbisaAsp\OrbisaAsp\obj\Debug\net8.0\staticwebassets.development.json
 D:\Visual proyects\Orbisa\OrbisaAsp\OrbisaAsp\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 D:\Visual proyects\Orbisa\OrbisaAsp\OrbisaAsp\obj\Debug\net8.0\swae.build.ex.cache
-D:\Visual proyects\Orbisa\OrbisaAsp\OrbisaAsp\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\Visual proyects\Orbisa\OrbisaAsp\OrbisaAsp\obj\Debug\net8.0\OrbisaAsp.csproj.Up2Date
 D:\Visual proyects\Orbisa\OrbisaAsp\OrbisaAsp\obj\Debug\net8.0\OrbisaAsp.dll
 D:\Visual proyects\Orbisa\OrbisaAsp\OrbisaAsp\obj\Debug\net8.0\refint\OrbisaAsp.dll
@@ -48,3 +47,5 @@ D:\Visual proyects\Orbisa\OrbisaAsp\OrbisaAsp\obj\Debug\net8.0\ref\OrbisaAsp.dll
 D:\Visual proyects\Orbisa\OrbisaAsp\OrbisaAsp\bin\Debug\net8.0\AWSSDK.Core.dll
 D:\Visual proyects\Orbisa\OrbisaAsp\OrbisaAsp\bin\Debug\net8.0\AWSSDK.DynamoDBv2.dll
 D:\Visual proyects\Orbisa\OrbisaAsp\OrbisaAsp\obj\Debug\net8.0\OrbisaAsp.sourcelink.json
+D:\Visual proyects\Orbisa\OrbisaAsp\OrbisaAsp\bin\Debug\net8.0\dotnet-tools.json
+D:\Visual proyects\Orbisa\OrbisaAsp\OrbisaAsp\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

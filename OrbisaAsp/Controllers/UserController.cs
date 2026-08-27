@@ -1,8 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿//Cristian Ramirez
+using Microsoft.AspNetCore.Mvc;
 using OrbisaApi.Data.Models;
 using OrbisaApi.Data.Services;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace OrbisaApi.Controllers
 {
@@ -17,7 +16,7 @@ namespace OrbisaApi.Controllers
             _userService = userService;
         }
 
-        // GET: api/<UserController>
+        // GET: api/user
         [HttpGet]
         public async Task<ActionResult> Get()
         {
@@ -25,7 +24,7 @@ namespace OrbisaApi.Controllers
             return Ok(response);
         }
 
-        // GET api/<UserController>/5
+        // GET api/user/{uuid}
         [HttpGet("{uuid}")]
         public async Task<IActionResult> GetById(string uuid)
         {
@@ -37,24 +36,71 @@ namespace OrbisaApi.Controllers
             return Ok(user);
         }
 
-        // POST api/<UserController>
+        // POST api/user
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] User user)
         {
-            var response = await _userService.CreateUser(user);
-            return Ok(response);
+            try
+            {
+                var response = await _userService.CreateUser(user);
+                if (response)
+                {
+                    return Created();
+                }
+                else
+                {
+                    return StatusCode(500);
+                }
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500);
+            }
+            
         }
 
-        // PUT api/<UserController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        // PUT api/user/{uuid}
+        [HttpPut("{uuid}")]
+        public async Task<ActionResult> Put(string uuid, [FromBody] User user)
         {
+            try
+            {
+                var response = await _userService.UpdateUser(uuid, user);
+                if (response)
+                {
+                    return Created();
+                }
+                else
+                {
+                    return StatusCode(500);
+                }
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500);
+            }
         }
 
-        // DELETE api/<UserController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        // DELETE api/user/{uuid}
+        [HttpDelete("{uuid}")]
+        public async Task<ActionResult> Delete(string uuid)
         {
+            try
+            {
+                var response = await _userService.DeleteUser(uuid);
+                if (response)
+                {
+                    return Ok();
+                }
+                else
+                {
+                    return StatusCode(500);
+                }
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500);
+            }
         }
     }
 }

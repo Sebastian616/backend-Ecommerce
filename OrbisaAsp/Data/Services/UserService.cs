@@ -16,20 +16,27 @@ namespace OrbisaApi.Data.Services
             _dynamoDb = dynamoDb;
         }
 
-        public async Task<User> CreateUser(User user)
+        public async Task<bool> CreateUser(User user)
         {
-            var request = new PutItemRequest
+            try
             {
-                TableName = TABLE_NAME,
-                Item = new Dictionary<string, AttributeValue>
+                var request = new PutItemRequest
                 {
-                    ["uuid"] =  new AttributeValue { S = Guid.NewGuid().ToString() },
-                    ["name"] = new AttributeValue { S = user.name },
-                    ["whatsapp"] = new AttributeValue { S = user.whatsapp },
-                }
-            };
-            await _dynamoDb.PutItemAsync(request);
-            return user;
+                    TableName = TABLE_NAME,
+                    Item = new Dictionary<string, AttributeValue>
+                    {
+                        ["uuid"] = new AttributeValue { S = Guid.NewGuid().ToString() },
+                        ["name"] = new AttributeValue { S = user.name },
+                        ["whatsapp"] = new AttributeValue { S = user.whatsapp },
+                    }
+                };
+                await _dynamoDb.PutItemAsync(request);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }            
         }
 
         public async Task<List<User>> GetUsers()
@@ -79,6 +86,82 @@ namespace OrbisaApi.Data.Services
                 response.Item["name"].S,
                 response.Item["whatsapp"].S
             );
+        }
+
+        public async Task<bool> UpdateUser(string uuid, User user)
+        {
+            try
+            {
+                var request = new UpdateItemRequest
+                {
+                    TableName = TABLE_NAME,
+
+                    Key = new Dictionary<string, AttributeValue>
+                    {
+                        ["uuid"] = new AttributeValue
+                        {
+                            S = uuid
+                        }
+                    },
+
+                    UpdateExpression = "SET #name = :name, whatsapp = :whatsapp",
+
+                    ExpressionAttributeNames = new Dictionary<string, string>
+                    {
+                        ["#name"] = "name"
+                    },
+
+                    ExpressionAttributeValues = new Dictionary<string, AttributeValue>
+                    {
+                        [":name"] = new AttributeValue
+                        {
+                            S = user.name
+                        },
+
+                        [":whatsapp"] = new AttributeValue
+                        {
+                            S = user.whatsapp
+                        }
+                    },
+
+                    ReturnValues = "ALL_NEW"
+                };
+
+                await _dynamoDb.UpdateItemAsync(request);
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> DeleteUser(string uuid)
+        {
+            try
+            {
+                var request = new DeleteItemRequest
+                {
+                    TableName = TABLE_NAME,
+
+                    Key = new Dictionary<string, AttributeValue>
+                    {
+                        ["uuid"] = new AttributeValue
+                        {
+                            S = uuid
+                        }
+                    }
+                };
+
+                await _dynamoDb.DeleteItemAsync(request);
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
     }
 }

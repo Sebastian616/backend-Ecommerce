@@ -27,55 +27,6 @@
   },
   {
     "ContainingType": "OrbisaApi.Controllers.UserController",
-    "Method": "Put",
-    "RelativePath": "api/User/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "value",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "OrbisaApi.Controllers.UserController",
-    "Method": "Delete",
-    "RelativePath": "api/User/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "OrbisaApi.Controllers.UserController",
     "Method": "GetById",
     "RelativePath": "api/User/{uuid}",
     "HttpMethod": "GET",
@@ -92,15 +43,36 @@
   },
   {
     "ContainingType": "OrbisaApi.Controllers.UserController",
-    "Method": "Prueba",
-    "RelativePath": "api/User/Prueba",
-    "HttpMethod": "POST",
+    "Method": "Put",
+    "RelativePath": "api/User/{uuid}",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
+        "Name": "uuid",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
         "Name": "user",
         "Type": "OrbisaApi.Data.Models.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrbisaApi.Controllers.UserController",
+    "Method": "Delete",
+    "RelativePath": "api/User/{uuid}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "uuid",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],
