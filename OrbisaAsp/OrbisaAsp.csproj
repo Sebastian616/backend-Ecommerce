@@ -7,7 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AWSSDK.CognitoIdentityProvider" Version="4.0.10" />
     <PackageReference Include="AWSSDK.DynamoDBv2" Version="4.0.103.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.30" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Negotiate" Version="8.0.30" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>

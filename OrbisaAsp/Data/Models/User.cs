@@ -1,5 +1,5 @@
 ﻿using Amazon.DynamoDBv2.DataModel;
-namespace OrbisaApi.Data.Models
+namespace OrbisaAsp.Data.Models
 {
 
     [DynamoDBTable("User")]
@@ -16,9 +16,5 @@ namespace OrbisaApi.Data.Models
             this.name = name;
             this.whatsapp = whatsapp;
         }
-
-        public User() { }
-        //Getters
-        //Setters
     }
 }

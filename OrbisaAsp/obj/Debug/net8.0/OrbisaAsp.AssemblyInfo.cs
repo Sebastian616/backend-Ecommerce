@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OrbisaAsp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ddfdf3c531a26342a136b09f57ed8ea086bfbfa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cf7ef383cef81a69fd4a217757bf4feb95b71e95")]
 [assembly: System.Reflection.AssemblyProductAttribute("OrbisaAsp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OrbisaAsp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

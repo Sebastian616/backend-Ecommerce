@@ -1,7 +1,9 @@
 ﻿//Cristian Ramirez
+using Amazon.DynamoDBv2.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using OrbisaApi.Data.Models;
-using OrbisaApi.Data.Services;
+using OrbisaAsp.Data.Models;
+using OrbisaAsp.Data.Services;
 
 namespace OrbisaApi.Controllers
 {
@@ -17,14 +19,28 @@ namespace OrbisaApi.Controllers
         }
 
         // GET: api/user
+        [Authorize]
         [HttpGet]
         public async Task<ActionResult> Get()
         {
-            var response = await _userService.GetUsers();
-            return Ok(response);
+            try
+            {
+                var response = await _userService.GetUsers();
+                return Ok(response);
+            }
+            catch(Exception ex)
+            {
+                return StatusCode(500, new
+                {
+                    message = ex.Message,
+                    innerException = ex.InnerException?.Message,
+                    stackTrace = ex.StackTrace
+                });
+            }
         }
 
         // GET api/user/{uuid}
+        [Authorize]
         [HttpGet("{uuid}")]
         public async Task<IActionResult> GetById(string uuid)
         {
@@ -37,6 +53,7 @@ namespace OrbisaApi.Controllers
         }
 
         // POST api/user
+        [Authorize]
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] User user)
         {
@@ -60,6 +77,7 @@ namespace OrbisaApi.Controllers
         }
 
         // PUT api/user/{uuid}
+        [Authorize]
         [HttpPut("{uuid}")]
         public async Task<ActionResult> Put(string uuid, [FromBody] User user)
         {
@@ -82,6 +100,7 @@ namespace OrbisaApi.Controllers
         }
 
         // DELETE api/user/{uuid}
+        [Authorize]
         [HttpDelete("{uuid}")]
         public async Task<ActionResult> Delete(string uuid)
         {

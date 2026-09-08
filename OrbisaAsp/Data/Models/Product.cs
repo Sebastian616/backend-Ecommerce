@@ -1,8 +1,9 @@
-﻿namespace OrbisaApi.Data.Models
+﻿namespace OrbisaAsp.Data.Models
 {
     public class Product
     {
         private int id {  get; set; }
+        private List<string> images { get; set; }
         private string name { get; set; }
         private SizeType size { get; set; }
         private string color { get; set; }

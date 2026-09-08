@@ -1,4 +1,4 @@
-﻿namespace OrbisaApi.Data.Models
+﻿namespace OrbisaAsp.Data.Models
 {
     public class Order
     {

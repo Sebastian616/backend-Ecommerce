@@ -3,32 +3,24 @@
   "WorkspaceRootPath": "D:\\Visual proyects\\Orbisa\\OrbisaAsp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FC4127C9-C871-E630-696C-47A8376EEDC1}|OrbisaAsp\\OrbisaAsp.csproj|d:\\visual proyects\\orbisa\\orbisaasp\\orbisaasp\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC4127C9-C871-E630-696C-47A8376EEDC1}|OrbisaAsp\\OrbisaAsp.csproj|solutionrelative:orbisaasp\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC4127C9-C871-E630-696C-47A8376EEDC1}|OrbisaAsp\\OrbisaAsp.csproj|d:\\visual proyects\\orbisa\\orbisaasp\\orbisaasp\\data\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC4127C9-C871-E630-696C-47A8376EEDC1}|OrbisaAsp\\OrbisaAsp.csproj|solutionrelative:orbisaasp\\data\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC4127C9-C871-E630-696C-47A8376EEDC1}|OrbisaAsp\\OrbisaAsp.csproj|d:\\visual proyects\\orbisa\\orbisaasp\\orbisaasp\\data\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC4127C9-C871-E630-696C-47A8376EEDC1}|OrbisaAsp\\OrbisaAsp.csproj|solutionrelative:orbisaasp\\data\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FC4127C9-C871-E630-696C-47A8376EEDC1}|OrbisaAsp\\OrbisaAsp.csproj|d:\\visual proyects\\orbisa\\orbisaasp\\orbisaasp\\data\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC4127C9-C871-E630-696C-47A8376EEDC1}|OrbisaAsp\\OrbisaAsp.csproj|solutionrelative:orbisaasp\\data\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC4127C9-C871-E630-696C-47A8376EEDC1}|OrbisaAsp\\OrbisaAsp.csproj|d:\\visual proyects\\orbisa\\orbisaasp\\orbisaasp\\data\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC4127C9-C871-E630-696C-47A8376EEDC1}|OrbisaAsp\\OrbisaAsp.csproj|solutionrelative:orbisaasp\\data\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC4127C9-C871-E630-696C-47A8376EEDC1}|OrbisaAsp\\OrbisaAsp.csproj|d:\\visual proyects\\orbisa\\orbisaasp\\orbisaasp\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FC4127C9-C871-E630-696C-47A8376EEDC1}|OrbisaAsp\\OrbisaAsp.csproj|solutionrelative:orbisaasp\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC4127C9-C871-E630-696C-47A8376EEDC1}|OrbisaAsp\\OrbisaAsp.csproj|d:\\visual proyects\\orbisa\\orbisaasp\\orbisaasp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC4127C9-C871-E630-696C-47A8376EEDC1}|OrbisaAsp\\OrbisaAsp.csproj|solutionrelative:orbisaasp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FC4127C9-C871-E630-696C-47A8376EEDC1}|OrbisaAsp\\OrbisaAsp.csproj|d:\\visual proyects\\orbisa\\orbisaasp\\orbisaasp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{FC4127C9-C871-E630-696C-47A8376EEDC1}|OrbisaAsp\\OrbisaAsp.csproj|solutionrelative:orbisaasp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC4127C9-C871-E630-696C-47A8376EEDC1}|OrbisaAsp\\OrbisaAsp.csproj|d:\\visual proyects\\orbisa\\orbisaasp\\orbisaasp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC4127C9-C871-E630-696C-47A8376EEDC1}|OrbisaAsp\\OrbisaAsp.csproj|solutionrelative:orbisaasp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC4127C9-C871-E630-696C-47A8376EEDC1}|OrbisaAsp\\OrbisaAsp.csproj|d:\\visual proyects\\orbisa\\orbisaasp\\orbisaasp\\data\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC4127C9-C871-E630-696C-47A8376EEDC1}|OrbisaAsp\\OrbisaAsp.csproj|solutionrelative:orbisaasp\\data\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,89 +42,68 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Visual proyects\\Orbisa\\OrbisaAsp\\OrbisaAsp\\appsettings.json",
-              "RelativeDocumentMoniker": "OrbisaAsp\\appsettings.json",
-              "ToolTip": "D:\\Visual proyects\\Orbisa\\OrbisaAsp\\OrbisaAsp\\appsettings.json",
-              "RelativeToolTip": "OrbisaAsp\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-08-26T21:28:18.511Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\Visual proyects\\Orbisa\\OrbisaAsp\\OrbisaAsp\\Data\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "OrbisaAsp\\Data\\Services\\UserService.cs",
-              "ToolTip": "D:\\Visual proyects\\Orbisa\\OrbisaAsp\\OrbisaAsp\\Data\\Services\\UserService.cs",
-              "RelativeToolTip": "OrbisaAsp\\Data\\Services\\UserService.cs",
-              "ViewState": "AgIAAAwAAACATdh+MiYSwFoAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-26T01:13:52.641Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Product.cs",
               "DocumentMoniker": "D:\\Visual proyects\\Orbisa\\OrbisaAsp\\OrbisaAsp\\Data\\Models\\Product.cs",
               "RelativeDocumentMoniker": "OrbisaAsp\\Data\\Models\\Product.cs",
               "ToolTip": "D:\\Visual proyects\\Orbisa\\OrbisaAsp\\OrbisaAsp\\Data\\Models\\Product.cs",
               "RelativeToolTip": "OrbisaAsp\\Data\\Models\\Product.cs",
-              "ViewState": "AgIAAAAAAABdwTQMHz0hwAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-25T23:58:57.499Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Order.cs",
-              "DocumentMoniker": "D:\\Visual proyects\\Orbisa\\OrbisaAsp\\OrbisaAsp\\Data\\Models\\Order.cs",
-              "RelativeDocumentMoniker": "OrbisaAsp\\Data\\Models\\Order.cs",
-              "ToolTip": "D:\\Visual proyects\\Orbisa\\OrbisaAsp\\OrbisaAsp\\Data\\Models\\Order.cs",
-              "RelativeToolTip": "OrbisaAsp\\Data\\Models\\Order.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAIwAsAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-25T23:58:16.685Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\Visual proyects\\Orbisa\\OrbisaAsp\\OrbisaAsp\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "OrbisaAsp\\Controllers\\UserController.cs",
-              "ToolTip": "D:\\Visual proyects\\Orbisa\\OrbisaAsp\\OrbisaAsp\\Controllers\\UserController.cs*",
-              "RelativeToolTip": "OrbisaAsp\\Controllers\\UserController.cs*",
-              "ViewState": "AgIAAFIAAAAAomKcv0kSwFkAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-21T22:39:33.549Z",
+              "WhenOpened": "2026-09-08T22:37:28.36Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\Visual proyects\\Orbisa\\OrbisaAsp\\OrbisaAsp\\Data\\Models\\User.cs",
-              "RelativeDocumentMoniker": "OrbisaAsp\\Data\\Models\\User.cs",
-              "ToolTip": "D:\\Visual proyects\\Orbisa\\OrbisaAsp\\OrbisaAsp\\Data\\Models\\User.cs",
-              "RelativeToolTip": "OrbisaAsp\\Data\\Models\\User.cs",
-              "ViewState": "AgIAAAIAAADwmgEuyNYVwA4AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-21T22:32:36.631Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Visual proyects\\Orbisa\\OrbisaAsp\\OrbisaAsp\\Program.cs",
               "RelativeDocumentMoniker": "OrbisaAsp\\Program.cs",
               "ToolTip": "D:\\Visual proyects\\Orbisa\\OrbisaAsp\\OrbisaAsp\\Program.cs",
               "RelativeToolTip": "OrbisaAsp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAACAEQGHUKXpvwoAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-15T03:47:53.24Z"
+              "WhenOpened": "2026-09-08T22:18:50.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\Visual proyects\\Orbisa\\OrbisaAsp\\OrbisaAsp\\Data\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "OrbisaAsp\\Data\\Services\\AuthService.cs",
+              "ToolTip": "D:\\Visual proyects\\Orbisa\\OrbisaAsp\\OrbisaAsp\\Data\\Services\\AuthService.cs",
+              "RelativeToolTip": "OrbisaAsp\\Data\\Services\\AuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-05T01:13:22.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Visual proyects\\Orbisa\\OrbisaAsp\\OrbisaAsp\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "OrbisaAsp\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Visual proyects\\Orbisa\\OrbisaAsp\\OrbisaAsp\\Properties\\launchSettings.json",
+              "RelativeToolTip": "OrbisaAsp\\Properties\\launchSettings.json",
+              "ViewState": "AgIAACQAAACg+kffpGEnwB4AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-04T22:23:37.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Visual proyects\\Orbisa\\OrbisaAsp\\OrbisaAsp\\appsettings.json",
+              "RelativeDocumentMoniker": "OrbisaAsp\\appsettings.json",
+              "ToolTip": "D:\\Visual proyects\\Orbisa\\OrbisaAsp\\OrbisaAsp\\appsettings.json",
+              "RelativeToolTip": "OrbisaAsp\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-08-26T21:28:18.511Z",
+              "EditorCaption": ""
             }
           ]
         }

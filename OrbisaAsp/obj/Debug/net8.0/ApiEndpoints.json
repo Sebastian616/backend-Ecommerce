@@ -1,5 +1,53 @@
 [
   {
+    "ContainingType": "OrbisaApi.Controllers.AuthController",
+    "Method": "Confirm",
+    "RelativePath": "api/Auth/confirm",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "OrbisaAsp.Data.Models.ConfirmRegisterRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrbisaApi.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "OrbisaAsp.Data.Models.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrbisaApi.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/Auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "OrbisaAsp.Data.Models.RegisterRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "OrbisaApi.Controllers.UserController",
     "Method": "Get",
     "RelativePath": "api/User",
@@ -19,7 +67,7 @@
     "Parameters": [
       {
         "Name": "user",
-        "Type": "OrbisaApi.Data.Models.User",
+        "Type": "OrbisaAsp.Data.Models.User",
         "IsRequired": true
       }
     ],
@@ -56,7 +104,7 @@
       },
       {
         "Name": "user",
-        "Type": "OrbisaApi.Data.Models.User",
+        "Type": "OrbisaAsp.Data.Models.User",
         "IsRequired": true
       }
     ],
