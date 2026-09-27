@@ -23,7 +23,10 @@ builder.Services.AddSingleton<IAmazonCognitoIdentityProvider>(_ =>
     )
 );
 
+builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<ProductService>();
+builder.Services.AddScoped<IImageService, ImageService>();
 builder.Services.AddControllers();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -57,7 +60,6 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
-builder.Services.AddScoped<AuthService>();
 
 var authority =
     $"https://cognito-idp.{region}.amazonaws.com/{userPoolId}";

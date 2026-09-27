@@ -2,14 +2,15 @@
 {
     public class Product
     {
-        private int id {  get; set; }
-        private List<string> images { get; set; }
-        private string name { get; set; }
-        private SizeType size { get; set; }
-        private string color { get; set; }
-        private GenderType gender { get; set; }
-        private string description { get; set; }
-        private bool isAbled { get; set; }
+        public string id {  get; set; }
+        public List<string> images { get; set; } = new();
+        public string name { get; set; }
+        public SizeType size { get; set; }
+        public string color { get; set; }
+        public GenderType gender { get; set; }
+        public string description { get; set; }
+        public string tag { get; set; }
+        public bool isAbled { get; set; }
     }
 
     public enum SizeType
