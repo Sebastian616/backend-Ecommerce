@@ -91,24 +91,142 @@ namespace OrbisaAsp.Data.Services
         }
 
         //TODO: Logica de filtrar por ID
-        public async Task<List<Product>> GetProductById(string id)
+        public async Task<Product> GetProductById(string id)
         {
-            var request = new ScanRequest
+            var request = new GetItemRequest
             {
-                TableName = TABLE_NAME
+                TableName = TABLE_NAME,
+
+                Key = new Dictionary<string, AttributeValue>
+                {
+                    ["id"] = new AttributeValue
+                    {
+                        S = id
+                    }
+                }
             };
 
-            var response =
-                await _dynamoDb.ScanAsync(request);
+            var response = await _dynamoDb.GetItemAsync(request);
 
-            var products = new List<Product>();
+            if (response.Item == null || response.Item.Count == 0)
+                return null;
 
-            foreach (var item in response.Items)
+            return MapProduct(response.Item);
+        }
+
+        public async Task<Product?> UpdateProduct(
+    Product product,
+    List<IFormFile>? images)
+        {
+            // Primero verificamos que el producto exista
+            var existingProduct = await GetProductById(product.id);
+
+            if (existingProduct == null)
             {
-                products.Add(MapProduct(item));
+                return null;
             }
 
-            return products;
+            // Si se enviaron nuevas imágenes, las subimos a Cloudinary
+            if (images != null && images.Count > 0)
+            {
+                product.images =
+                    await _imageService.UploadImagesAsync(images);
+            }
+            else
+            {
+                // Si no se enviaron imágenes, conservamos las actuales
+                product.images = existingProduct.images;
+            }
+
+            var request = new PutItemRequest
+            {
+                TableName = TABLE_NAME,
+
+                Item = new Dictionary<string, AttributeValue>
+                {
+                    ["id"] = new AttributeValue
+                    {
+                        S = product.id
+                    },
+
+                    ["images"] = new AttributeValue
+                    {
+                        L = product.images
+                            .Select(image => new AttributeValue
+                            {
+                                S = image
+                            })
+                            .ToList()
+                    },
+
+                    ["name"] = new AttributeValue
+                    {
+                        S = product.name
+                    },
+
+                    ["size"] = new AttributeValue
+                    {
+                        N = ((int)product.size).ToString()
+                    },
+
+                    ["color"] = new AttributeValue
+                    {
+                        S = product.color
+                    },
+
+                    ["gender"] = new AttributeValue
+                    {
+                        N = ((int)product.gender).ToString()
+                    },
+
+                    ["description"] = new AttributeValue
+                    {
+                        S = product.description
+                    },
+
+                    ["tag"] = new AttributeValue
+                    {
+                        S = product.tag
+                    },
+
+                    ["isAbled"] = new AttributeValue
+                    {
+                        BOOL = product.isAbled
+                    }
+                }
+            };
+
+            await _dynamoDb.PutItemAsync(request);
+
+            return product;
+        }
+
+        public async Task<bool> DeleteProduct(string id)
+        {
+            // Verificamos que exista
+            var existingProduct = await GetProductById(id);
+
+            if (existingProduct == null)
+            {
+                return false;
+            }
+
+            var request = new DeleteItemRequest
+            {
+                TableName = TABLE_NAME,
+
+                Key = new Dictionary<string, AttributeValue>
+                {
+                    ["id"] = new AttributeValue
+                    {
+                        S = id
+                    }
+                }
+            };
+
+            await _dynamoDb.DeleteItemAsync(request);
+
+            return true;
         }
 
         private Product MapProduct(

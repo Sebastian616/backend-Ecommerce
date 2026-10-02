@@ -76,7 +76,7 @@ namespace OrbisaAsp.Controllers
 
         // POST: api/Product
         [HttpPost]
-        [Authorize]
+        [Authorize(Policy = "Admin")]
         [Consumes("multipart/form-data")]
         public async Task<IActionResult> CreateProduct(
             [FromForm] CreateProductRequest request)
@@ -120,9 +120,9 @@ namespace OrbisaAsp.Controllers
             }
         }
 
-        /*// PUT: api/Product/{id}
+        // PUT: api/Product/{id}
         [HttpPut("{id}")]
-        [Authorize]
+        [Authorize(Policy = "Admin")]
         [Consumes("multipart/form-data")]
         public async Task<IActionResult> UpdateProduct(
             string id,
@@ -205,6 +205,6 @@ namespace OrbisaAsp.Controllers
                     }
                 );
             }
-        }*/
+        }
     }
 }
